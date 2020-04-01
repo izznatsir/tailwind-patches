@@ -4,7 +4,7 @@ const {
   spacingPatch,
   maxWidthPatch,
   gridPatch,
-} = require('./tailwind-patches');
+} = require('@izznatsir/tailwind-patches');
 
 module.exports = {
   theme: {

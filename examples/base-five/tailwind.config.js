@@ -1,14 +1,12 @@
 const plugin = require('tailwindcss/plugin');
 const {
-  changeREMValue,
+  changeRemValue,
   baseFiveFontSize,
-} = require('./tailwind-patches/base-five');
-const {
   screenPatch,
   spacingPatch,
   maxWidthPatch,
   gridPatch,
-} = require('./tailwind-patches');
+} = require('@izznatsir/tailwind-patches');
 
 module.exports = {
   theme: {
@@ -22,7 +20,7 @@ module.exports = {
   variants: {},
   plugins: [
     plugin(function ({ addBase, addUtilities, config }) {
-      changeREMValue(addBase, config);
+      changeRemValue(addBase, config);
       addUtilities(gridPatch);
     }),
   ],

@@ -1,0 +1,18 @@
+{
+  "name": "@izznatsir/tailwind-patches",
+  "version": "0.1.0",
+  "description": "Personal collection of TailwindCSS plugins.",
+  "main": "index.js",
+  "repository": "https://github.com/izznatsir/tailwind-patches",
+  "author": "Izzuddin Natsir",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc --project tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.8",
+    "prettier": "^2.0.2",
+    "typescript": "^3.8.3"
+  }
+}

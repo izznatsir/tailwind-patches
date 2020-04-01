@@ -1,8 +1,29 @@
+const changeRemValue = (addBase, config) => {
+  addBase({
+    html: { fontSize: '20px' },
+    body: { fontSize: config('theme.fontSize.base') }
+  });
+};
+
+const baseFiveFontSize = {
+  xs: '0.5rem',
+  sm: '0.65rem',
+  base: '0.75rem',
+  md: '0.85rem',
+  lg: '1rem',
+  xl: '1.15rem',
+  '2xl': '1.25rem',
+  '3xl': '1.5rem',
+  '4xl': '1.75rem',
+  '5xl': '2.5rem',
+  '6xl': '3.25rem'
+};
+
 const screenPatch = {
   '2xl': '1440px',
   '3xl': '1600px',
   '4xl': '1920px',
-  '5xl': '2560px',
+  '5xl': '2560px'
 };
 
 const spacingPatch = {
@@ -87,7 +108,7 @@ const spacingPatch = {
   '97': '24.25rem',
   '98': '24.5rem',
   '99': '24.75rem',
-  '100': '25rem',
+  '100': '25rem'
 };
 
 const maxWidthPatch = {
@@ -95,7 +116,7 @@ const maxWidthPatch = {
   '8xl': '85rem',
   '1/4': '25%',
   '1/2': '50%',
-  '3/4': '75%',
+  '3/4': '75%'
 };
 
 const gridPatch = {
@@ -134,12 +155,36 @@ const gridPatch = {
   '.place-self-start': { 'place-self': 'start' },
   '.place-self-end': { 'place-self': 'end' },
   '.place-self-center': { 'place-self': 'center' },
-  '.place-self-stretch': { 'place-self': 'stretch' },
+  '.place-self-stretch': { 'place-self': 'stretch' }
+};
+
+const sourceWireframeKit = {
+  fontSize: {
+    xxs: '0.5rem',
+    xs: '0.65rem',
+    sm: '0.75rem',
+    base: '0.75rem',
+    md: '0.85rem',
+    lg: '1rem',
+    xl: '1.25rem',
+    xxl: '1.5rem',
+    h7: '0.65rem',
+    h6: '1rem',
+    h5: '2.5rem',
+    h4: '1.75rem',
+    h3: '2.25rem',
+    h2: '3.25rem',
+    h1: '3.5rem',
+    hero: '4.75rem'
+  }
 };
 
 module.exports = {
+  changeRemValue,
+  baseFiveFontSize,
   screenPatch,
   spacingPatch,
   maxWidthPatch,
   gridPatch,
+  sourceWireframeKit
 };

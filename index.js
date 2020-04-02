@@ -298,6 +298,7 @@ module.exports = {
     baseFiveFontSize: baseFiveFontSize,
     screenPatch: screenPatch,
     spacingPatch: spacingPatch,
+    insetPatch: insetPatch,
     maxWidthPatch: maxWidthPatch,
     gridPatch: gridPatch,
     sourceWireframeKit: sourceWireframeKit,

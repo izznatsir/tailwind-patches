@@ -1,6 +1,6 @@
 {
   "name": "@izznatsir/tailwind-patches",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Personal collection of TailwindCSS plugins.",
   "main": "index.js",
   "repository": "https://github.com/izznatsir/tailwind-patches",

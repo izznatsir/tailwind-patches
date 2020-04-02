@@ -310,6 +310,7 @@ module.exports = {
   baseFiveFontSize,
   screenPatch,
   spacingPatch,
+  insetPatch,
   maxWidthPatch,
   gridPatch,
   sourceWireframeKit,

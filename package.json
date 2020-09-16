@@ -1,6 +1,6 @@
 {
   "name": "@izznatsir/tailwind-patches",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Personal collection of TailwindCSS plugins.",
   "main": "index.js",
   "repository": "https://github.com/izznatsir/tailwind-patches",
@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "tsc --project tsconfig.json"
+    "build": "tsc --project tsconfig.json",
+    "publish": "npm publish --access public"
   },
   "devDependencies": {
     "@types/node": "13.13.20",

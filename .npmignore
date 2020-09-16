@@ -4,6 +4,7 @@ node_modules
 # Development
 examples
 src
+tsconfig.json
 .prettierrc
 
 # misc

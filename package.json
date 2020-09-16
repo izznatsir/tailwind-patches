@@ -1,6 +1,6 @@
 {
   "name": "@izznatsir/tailwind-patches",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Personal collection of TailwindCSS plugins.",
   "main": "index.js",
   "repository": "https://github.com/izznatsir/tailwind-patches",
@@ -11,8 +11,8 @@
     "build": "tsc --project tsconfig.json"
   },
   "devDependencies": {
-    "@types/node": "^13.9.8",
-    "prettier": "^2.0.2",
-    "typescript": "^3.8.3"
+    "@types/node": "13.13.20",
+    "prettier": "2.1.2",
+    "typescript": "4.0.2"
   }
 }

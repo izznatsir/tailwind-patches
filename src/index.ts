@@ -1,11 +1,9 @@
 export type FnAddBase = (styles: object) => void;
-export type FnConfig = (key: string) => object;
-export type FnChangeRemValue = (addBase: FnAddBase, config: FnConfig) => void;
+export type FnChangeRemValue = (addBase: FnAddBase, remSize: number) => void;
 
-const changeRemValue: FnChangeRemValue = (addBase, config) => {
+const changeRemValue: FnChangeRemValue = (addBase, remSize = 20) => {
   addBase({
-    html: { fontSize: '20px' },
-    body: { fontSize: config('theme.fontSize.base') },
+    html: { fontSize: `${remSize}px` },
   });
 };
 
@@ -227,84 +225,6 @@ const maxWidthPatch = {
   '3/4': '75%',
 };
 
-const gridPatch = {
-  // align-content
-  '.align-content-start': { 'align-content': 'start' },
-  '.align-content-end': { 'align-content': 'end' },
-  '.align-content-center': { 'align-content': 'center' },
-  '.align-content-stretch': { 'align-content': 'stretch' },
-  '.align-content-between': { 'align-content': 'space-between' },
-  '.align-content-around': { 'align-content': 'space-around' },
-  '.align-content-evenly': { 'align-content': 'space-evenly' },
-  // place-content
-  '.place-content-start': { 'place-content': 'start' },
-  '.place-content-end': { 'place-content': 'end' },
-  '.place-content-center': { 'place-content': 'center' },
-  '.place-content-stretch': { 'place-content': 'stretch' },
-  '.place-content-between': { 'place-content': 'space-between' },
-  '.place-content-around': { 'place-content': 'space-around' },
-  '.place-content-evenly': { 'place-content': 'space-evenly' },
-  // justify-items
-  '.justify-items-start': { 'justify-items': 'start' },
-  '.justify-items-end': { 'justify-items': 'end' },
-  '.justify-items-center': { 'justify-items': 'center' },
-  '.justify-items-stretch': { 'justify-items': 'stretch' },
-  // place-items
-  '.place-items-start': { 'place-items': 'start' },
-  '.place-items-end': { 'place-items': 'end' },
-  '.place-items-center': { 'place-items': 'center' },
-  '.place-items-stretch': { 'place-items': 'stretch' },
-  // justify-self
-  '.justify-self-start': { 'justify-self': 'start' },
-  '.justify-self-end': { 'justify-self': 'end' },
-  '.justify-self-center': { 'justify-self': 'center' },
-  '.justify-self-stretch': { 'justify-self': 'stretch' },
-  // place-self
-  '.place-self-start': { 'place-self': 'start' },
-  '.place-self-end': { 'place-self': 'end' },
-  '.place-self-center': { 'place-self': 'center' },
-  '.place-self-stretch': { 'place-self': 'stretch' },
-};
-
-const sourceWireframeKit = {
-  fontSize: {
-    xxs: '0.5rem',
-    xs: '0.65rem',
-    sm: '0.75rem',
-    base: '0.75rem',
-    md: '0.85rem',
-    lg: '1rem',
-    xl: '1.25rem',
-    xxl: '1.5rem',
-    h7: '0.65rem',
-    h6: '1rem',
-    h5: '1.25rem',
-    h4: '1.75rem',
-    h3: '2.25rem',
-    h2: '2.75rem',
-    h1: '3.5rem',
-    hero: '4.75rem',
-  },
-  lineHeight: {
-    xxs: '0.75rem',
-    xs: '1rem',
-    sm: '1rem',
-    base: '1rem',
-    md: '1.25rem',
-    lg: '1.5rem',
-    xl: '1.75rem',
-    xxl: '2rem',
-    h7: '1rem',
-    h6: '1.25rem',
-    h5: '1.5rem',
-    h4: '2rem',
-    h3: '2.5rem',
-    h2: '3rem',
-    h1: '3.75rem',
-    hero: '5rem',
-  },
-};
-
 module.exports = {
   changeRemValue,
   baseFiveFontSize,
@@ -312,6 +232,4 @@ module.exports = {
   spacingPatch,
   insetPatch,
   maxWidthPatch,
-  gridPatch,
-  sourceWireframeKit,
 };

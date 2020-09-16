@@ -5,7 +5,6 @@ const {
   screenPatch,
   spacingPatch,
   maxWidthPatch,
-  gridPatch,
 } = require('@izznatsir/tailwind-patches');
 
 module.exports = {
@@ -19,9 +18,8 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    plugin(function ({ addBase, addUtilities, config }) {
-      changeRemValue(addBase, config);
-      addUtilities(gridPatch);
+    plugin(function ({ addBase }) {
+      changeRemValue(addBase);
     }),
   ],
 };

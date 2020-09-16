@@ -1,13 +1,13 @@
 export type FnAddBase = (styles: object) => void;
 export type FnChangeRemValue = (addBase: FnAddBase, remSize: number) => void;
 
-const changeRemValue: FnChangeRemValue = (addBase, remSize = 20) => {
+export const changeRemValue: FnChangeRemValue = (addBase, remSize = 20) => {
   addBase({
     html: { fontSize: `${remSize}px` },
   });
 };
 
-const baseFiveFontSize = {
+export const baseFiveFontSize = {
   xs: '0.5rem',
   sm: '0.65rem',
   base: '0.75rem',
@@ -21,14 +21,14 @@ const baseFiveFontSize = {
   '6xl': '3.25rem',
 };
 
-const screenPatch = {
+export const screenPatch = {
   '2xl': '1440px',
   '3xl': '1600px',
   '4xl': '1920px',
   '5xl': '2560px',
 };
 
-const spacingPatch = {
+export const spacingPatch = {
   '7': '1.75rem',
   '9': '2.25rem',
   '11': '2.75rem',
@@ -114,7 +114,7 @@ const spacingPatch = {
   '100': '25rem',
 };
 
-const insetPatch = {
+export const insetPatch = {
   '1': '0.25rem',
   '2': '0.5rem',
   '3': '0.75rem',
@@ -217,19 +217,10 @@ const insetPatch = {
   '100': '25rem',
 };
 
-const maxWidthPatch = {
+export const maxWidthPatch = {
   '7xl': '80rem',
   '8xl': '85rem',
   '1/4': '25%',
   '1/2': '50%',
   '3/4': '75%',
-};
-
-module.exports = {
-  changeRemValue,
-  baseFiveFontSize,
-  screenPatch,
-  spacingPatch,
-  insetPatch,
-  maxWidthPatch,
 };

@@ -1,10 +1,13 @@
-var changeRemValue = function (addBase, remSize) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.maxWidthPatch = exports.insetPatch = exports.spacingPatch = exports.screenPatch = exports.baseFiveFontSize = exports.changeRemValue = void 0;
+exports.changeRemValue = function (addBase, remSize) {
     if (remSize === void 0) { remSize = 20; }
     addBase({
         html: { fontSize: remSize + "px" },
     });
 };
-var baseFiveFontSize = {
+exports.baseFiveFontSize = {
     xs: '0.5rem',
     sm: '0.65rem',
     base: '0.75rem',
@@ -17,13 +20,13 @@ var baseFiveFontSize = {
     '5xl': '2.5rem',
     '6xl': '3.25rem',
 };
-var screenPatch = {
+exports.screenPatch = {
     '2xl': '1440px',
     '3xl': '1600px',
     '4xl': '1920px',
     '5xl': '2560px',
 };
-var spacingPatch = {
+exports.spacingPatch = {
     '7': '1.75rem',
     '9': '2.25rem',
     '11': '2.75rem',
@@ -108,7 +111,7 @@ var spacingPatch = {
     '99': '24.75rem',
     '100': '25rem',
 };
-var insetPatch = {
+exports.insetPatch = {
     '1': '0.25rem',
     '2': '0.5rem',
     '3': '0.75rem',
@@ -210,19 +213,10 @@ var insetPatch = {
     '99': '24.75rem',
     '100': '25rem',
 };
-var maxWidthPatch = {
+exports.maxWidthPatch = {
     '7xl': '80rem',
     '8xl': '85rem',
     '1/4': '25%',
     '1/2': '50%',
     '3/4': '75%',
 };
-module.exports = {
-    changeRemValue: changeRemValue,
-    baseFiveFontSize: baseFiveFontSize,
-    screenPatch: screenPatch,
-    spacingPatch: spacingPatch,
-    insetPatch: insetPatch,
-    maxWidthPatch: maxWidthPatch,
-};
-export {};

@@ -8,8 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "tsc --project tsconfig.json",
-    "publish": "npm publish --access public"
+    "build": "tsc --project tsconfig.json"
   },
   "devDependencies": {
     "@types/node": "13.13.20",
